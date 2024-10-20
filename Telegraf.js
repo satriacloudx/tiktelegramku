@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
   const data = {
     status: 'true',
     message: 'Bot Successfully Activated!',
-    author: 'BOTCAHX'
+    author: 'SATRIADEV'
   };
   const result = {
     response: data
@@ -38,7 +38,7 @@ app.on('error', (err) => {
 listenOnPort(port);
 
 // Bot config token 
-let token = 'YOUR_TOKEN_HERE'  //replace this part with your bot token
+let token = '7691833551:AAHaxfUoIsrKFgwuAgovv81_u0XjzYduUBE'  //replace this part with your bot token
 const bot = new Telegraf(token, { polling: true });
 let Start = new Date();
 
@@ -54,7 +54,7 @@ const Figlet = () => {
       return;
     }
     console.log(chalk.yellow.bold(data));
-    console.log(chalk.yellow(`BOTCAHX`));
+    console.log(chalk.yellow(`SATRIADEV`));
   });
 };
 
@@ -89,8 +89,8 @@ bot.onText(/^\/runtime$/, (msg) => {
 });
 bot.onText(/^\/start$/, (msg) => {
 const From = msg.chat.id;
-const caption = `
-Bot ini dirancang khusus untuk membantu Anda mendownload video TikTok secara otomatis. Cukup kirimkan URL video TikTok yang ingin Anda download, dan bot ini akan menyelesaikan tugasnya dengan cepat dan mudah!`
+const caption = `ℹ Dengan Bot ini Anda dapat dengan mudah dan cepat mengunduh konten seperti: Video dan Musik dari jejaring Sosial TikTok.
+Yang Anda butuhkan hanyalah mengirimkan tautan ke Bot!`
 bot.sendMessage(From, caption);
 });
 
@@ -109,9 +109,9 @@ bot.on('message', async (msg) => {
         await sleep(3000)
         await bot.sendAudio(From, audio, { caption: title_audio });
         await sleep(3000)
-        await bot.sendMessage(From, 'Powered by @wtffry');
+        await bot.sendMessage(From, 'Powered by @satdevx');
     } catch (error) {
-        bot.sendMessage(From, 'Sorry, an error occurred while downloading the TikTok video.');
+        bot.sendMessage(From, 'Maaf, terjadi kesalahan saat mengunduh video TikTok.');
         logs(`[ ERROR ] ${From}: ${error.message}`, 'red');
     }
 }
