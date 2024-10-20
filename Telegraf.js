@@ -109,7 +109,7 @@ bot.on('message', async (msg) => {
         await sleep(3000)
         await bot.sendAudio(From, audio, { caption: title_audio });
         await sleep(3000)
-        await bot.sendMessage(From, 'Powered by @satdevx');
+        await bot.sendMessage(From, 'Powered by @satriadevx');
     } catch (error) {
         bot.sendMessage(From, 'Maaf, terjadi kesalahan saat mengunduh video TikTok.');
         logs(`[ ERROR ] ${From}: ${error.message}`, 'red');
