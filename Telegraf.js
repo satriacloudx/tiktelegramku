@@ -38,7 +38,7 @@ app.on('error', (err) => {
 listenOnPort(port);
 
 // Bot config token 
-let token = '7395604866:AAG5eHFUGKs57xxD5AmJjfLnRvp_wMQH-DM'  //replace this part with your bot token
+let token = '7691833551:AAGcHtK_j_q1bFUfyFKtP_HHBQyrWiuI2e8'  //replace this part with your bot token
 const bot = new Telegraf(token, { polling: true });
 let Start = new Date();
 
